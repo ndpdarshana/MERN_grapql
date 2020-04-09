@@ -152,7 +152,6 @@ class EventsPage extends Component{
         });
         return {events:updatedEvent};
       });
-      console.log(this.state.events);
     }).catch(err => {
       console.log(err);
     });
@@ -198,7 +197,6 @@ class EventsPage extends Component{
       }
       return res.json();
     }).then(resData => {
-      console.log(resData);
       this.setState({selectedEvent:null});
     }).catch(err => {
       console.log(err);
