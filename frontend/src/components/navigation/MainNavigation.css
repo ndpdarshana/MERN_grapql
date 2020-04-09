@@ -1,18 +1,21 @@
 .main-navigation{
-  position:fixed;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 3.5rem;
-  background: #01d1d1;
-  padding: 0 1rem;
-  display:flex;
+  background: #5101d1;
+  padding: 0 2rem;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .main-navigation_logo h1{
   margin: 0;
-  font-size: 1.5rem;
+    font-size: 1.5rem;
+    color: #dfcefc;
 }
 
 .main-navigation_item {
@@ -34,12 +37,14 @@
 .main-navigation_item a,
 .main-navigation_item button{
   text-decoration: none;
-  color: #000;
+  color: white;
   padding: 0.25rem 0.5rem;
   border: none;
   font: inherit;
   background: transparent;
   cursor: pointer;
+  vertical-align: middle;
+  margin: 0;
 }
 
 .main-navigation_item a:hover,
@@ -48,5 +53,7 @@
 .main-navigation_item button:hover,
 .main-navigation_item button:active
 {
-  color: #fff;
+  background: #ffffff;
+  color: #5101d1;
+  border-radius: 5px;
 }
