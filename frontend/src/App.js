@@ -20,7 +20,6 @@ class App extends Component{
   };
 
   logout = () => {
-    console.log('here');
     this.setState({token:null, userId:null});
   };
 
