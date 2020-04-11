@@ -1,0 +1,102 @@
+# mutation{
+#   createEvent(eventInput:{
+#     title:"Event 444",
+#     description:"Event body 444",
+#     price:25.3,
+#     date: "2020-04-3T12:51:40.850Z",
+#     creator: "5e6f3de3f329701600697b02"
+#   }){
+#     _id
+#     title
+#     description
+#     date
+#     creator{
+#       email
+#     }
+#   }
+# }
+
+# query{
+#   login(email:"ndp.test@gmail.com", password:"tester@123"){
+#     userId
+#     token
+#     tokenExpiration
+#   }
+# }
+
+# mutation {
+#   createUser(userInpu:{email:"ndp.test@gmail.com", password:"tester@123"}){
+#     _id
+#     email
+#     password
+#   }
+# }
+
+# mutation {
+#   bookEvent(eventId:"5e81eb75f889576a60f441db"){
+#     _id
+#     user{
+#       _id
+#       email
+#     }
+#     event{
+#       _id
+#       title
+#     }
+#     createdAt
+#     updatedAt
+#   }
+# }
+
+# mutation{
+#   cancelBooking(bookingId:"5e81ec06f889576a60f441dc"){
+#     title
+#     creator{
+#       email
+#     }
+#   }
+# }
+
+# query{
+#   bookings{
+#     _id
+#     user{
+#       email
+#     }
+#     event{
+#       title
+#     }
+#     createdAt
+#     updatedAt
+#   }
+# }
+# query{
+#   bookings{
+#     _id
+#     event
+#     user
+#   }
+# }
+
+# query{
+#   events{
+#     _id
+#     title
+#     date
+#     creator{
+#       _id
+#       email
+#       createdEvents{
+#         title
+#         date
+#       }
+#     }
+#   }
+# }
+
+# query{
+#   users{
+#     id
+#     date
+#   }
+# }
