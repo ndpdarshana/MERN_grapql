@@ -37,7 +37,7 @@ const user = async userId => {
   return {
       ...user._doc,
       _id:user.id,
-      createdEvents: eventLoader.load.bind(this, user._doc.createdEvents)
+      createdEvents: () => eventLoader.loadMany(user._doc.createdEvents)
     };
   }catch(err){
     throw err;
@@ -57,7 +57,6 @@ const events = async eventIds => {
 
 const singleEvent = async eventId => {
   try{
-    console.log(eventLoader);
     const singleEvent = await eventLoader.load(eventId.toString());
     // const singleEvent = await Event.findById(eventId);
     return singleEvent;
